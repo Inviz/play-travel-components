@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
 import Carousel from 'react-multi-carousel';
@@ -96,8 +97,14 @@ export default function LogoSlider({
         ssr={false}
         infinite={true}
         showDots={false}
-        customRightArrow={<CustomRightArrow />}
-        customLeftArrow={<CustomLeftArrow />}
+        customRightArrow={
+          /* @ts-ignore */
+          <CustomRightArrow />
+        }
+        customLeftArrow={
+          /* @ts-ignore */
+          <CustomLeftArrow />
+        }
       >
         {logos.map((logo, index) => {
           return (
