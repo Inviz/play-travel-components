@@ -97,14 +97,8 @@ export default function LogoSlider({
         ssr={false}
         infinite={true}
         showDots={false}
-        customRightArrow={
-          /* @ts-ignore */
-          <CustomRightArrow />
-        }
-        customLeftArrow={
-          /* @ts-ignore */
-          <CustomLeftArrow />
-        }
+        customRightArrow={<CustomRightArrow onClick={() => null} />}
+        customLeftArrow={<CustomLeftArrow onClick={() => null} />}
       >
         {logos.map((logo, index) => {
           return (
