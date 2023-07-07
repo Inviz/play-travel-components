@@ -1,7 +1,6 @@
 'use client';
 import * as FEAAS from '@sitecore-feaas/clientside/react';
-import './Slider';
-import('./Slider');
+import Slider from './Slider';
 export default function ClientsideComponents() {
-  return FEAAS.linkComponents([]) && <></>;
+  return FEAAS.linkComponents([Promise.resolve(Slider)]) && <></>;
 }
