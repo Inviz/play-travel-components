@@ -37,7 +37,6 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
           <link rel={headLink.rel} key={headLink.href} href={headLink.href} />
         ))}
       </Head>
-      <ClientsideComponents />
 
       {/* root placeholder for the app, which we add components to using route data */}
       <div className={mainClassPageEditing}>
