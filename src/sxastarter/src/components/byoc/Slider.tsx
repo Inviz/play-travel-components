@@ -100,7 +100,7 @@ export default function LogoSlider({
         customRightArrow={<CustomRightArrow onClick={() => null} />}
         customLeftArrow={<CustomLeftArrow onClick={() => null} />}
       >
-        {logos.map((logo, index) => {
+        {(logos || []).map((logo, index) => {
           return (
             <div key={index} style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
               <a href={logo.url}>
