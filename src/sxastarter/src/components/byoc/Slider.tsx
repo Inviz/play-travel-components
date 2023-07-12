@@ -88,7 +88,10 @@ export default function LogoSlider({
     },
   };
   return (
-    <div className="-card" style={{ ['userSelect' as 'cursor']: 'none', margin: '0 50px' }}>
+    <div
+      className="-card"
+      style={{ ['userSelect' as 'cursor']: 'none', padding: '0 50px !important' }}
+    >
       <h4>{title}</h4>
       <Carousel
         responsive={responsive}
@@ -104,7 +107,14 @@ export default function LogoSlider({
           return (
             <div key={index} style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
               <a href={logo.url}>
-                <img src={logo.src} alt="" style={{ ['userDrag' as 'cursor']: 'none' }} />
+                <img
+                  src={logo.src}
+                  alt=""
+                  style={{
+                    ['userDrag' as 'cursor']: 'none',
+                    ['webkitUserDrag' as 'cursor']: 'none',
+                  }}
+                />
               </a>
             </div>
           );
