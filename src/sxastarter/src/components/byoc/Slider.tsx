@@ -88,7 +88,7 @@ export default function LogoSlider({
     },
   };
   return (
-    <div className="-card">
+    <div className="-card" style={{ ['userSelect' as 'cursor']: 'none', margin: '0 50px' }}>
       <h4>{title}</h4>
       <Carousel
         responsive={responsive}
@@ -104,7 +104,7 @@ export default function LogoSlider({
           return (
             <div key={index} style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
               <a href={logo.url}>
-                <img src={logo.src} alt="" />
+                <img src={logo.src} alt="" style={{ ['userDrag' as 'cursor']: 'none' }} />
               </a>
             </div>
           );
@@ -145,7 +145,6 @@ FEAAS.registerComponent(LogoSlider, {
   },
   ui: {
     logos: {
-      title: 'a',
       items: {
         src: {
           'ui:options': {

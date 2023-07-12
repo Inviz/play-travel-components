@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { Placeholder, LayoutServiceData, Field, HTMLLink } from '@sitecore-jss/sitecore-jss-nextjs';
 import { getPublicUrl } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 import Scripts from 'src/Scripts';
+import * as FEAAS from '@sitecore-feaas/clientside';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
@@ -32,6 +33,10 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
       <Scripts />
       <Head>
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>
+        <link
+          rel="stylesheet"
+          href="https://feaas.blob.core.windows.net/styles/2Mh4e01wdjkQ2aNYAsbnyE/published.css"
+        />
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
         {headLinks.map((headLink) => (
           <link rel={headLink.rel} key={headLink.href} href={headLink.href} />
