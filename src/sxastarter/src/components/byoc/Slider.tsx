@@ -20,7 +20,7 @@ const CustomRightArrow = ({ onClick }: { onClick: () => void }) => {
         position: 'absolute',
         right: 0,
         top: '50%',
-        transform: 'translateY(-50%) translateY(-5px) translateX(100%)',
+        transform: 'translateY(-50%) translateY(-5px)',
         width: '32px',
         height: '32px',
         padding: 0,
@@ -44,7 +44,7 @@ const CustomLeftArrow = ({ onClick }: { onClick: () => void }) => {
       style={{
         position: 'absolute',
         left: 0,
-        transform: 'translateY(-50%) translateY(-5px) translateX(-100%)',
+        transform: 'translateY(-50%) translateY(-5px)',
         top: '50%',
         width: '32px',
         height: '32px',
@@ -56,7 +56,7 @@ const CustomLeftArrow = ({ onClick }: { onClick: () => void }) => {
         userSelect: 'none',
       }}
     >
-      <span style={{ marginLeft: '02' }}>◀</span>
+      <span style={{ marginLeft: '-2px' }}>◀</span>
     </button>
   );
 };
